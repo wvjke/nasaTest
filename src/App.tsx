@@ -1,7 +1,12 @@
-import "./index.scss";
+import "./App.scss";
 
-const App = () => {
-    return <h1>Test</h1>;
-};
+function App() {
+    return (
+        <>
+            <h1>NEO List</h1>
+            <img src="./backg.jpg"></img>
+        </>
+    );
+}
 
 export default App;
