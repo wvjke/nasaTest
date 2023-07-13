@@ -10,7 +10,9 @@ export const fetchData = async () => {
             const date = dayjs(startOfMonth)
                 .add(index, "day")
                 .format("YYYY-MM-DD");
-            const url = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${date}&end_date=${date}&api_key=${process.env.API_KEY}`;
+            const url = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${date}&end_date=${date}&api_key=${
+                import.meta.env.VITE_NASA_API_KEY
+            }`;
             return fetch(url);
         });
 
